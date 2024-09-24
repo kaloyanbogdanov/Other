@@ -1,0 +1,108 @@
+kaloyanbogdanov@Kaloyans-MacBook-Air ~ % ls -la
+total 80
+drwxr-x---+ 24 kaloyanbogdanov  staff    768 Sep 18 21:01 .
+drwxr-xr-x   5 root             admin    160 Sep  1 17:24 ..
+-r--------   1 kaloyanbogdanov  staff      7 Jan  8  2024 .CFUserTextEncoding
+-rw-r--r--@  1 kaloyanbogdanov  staff  12292 Sep 18 21:09 .DS_Store
+drwx------+ 15 kaloyanbogdanov  staff    480 Sep 18 19:00 .Trash
+drwx------@  4 kaloyanbogdanov  staff    128 Sep 18 20:44 .dbtools
+-rw-r--r--   1 kaloyanbogdanov  staff     87 Sep 18 20:36 .gitconfig
+drwxr-xr-x@  5 kaloyanbogdanov  staff    160 Sep 18 18:01 .vscode
+-rw-r--r--   1 kaloyanbogdanov  staff    166 Jan  7  2024 .zprofile
+-rw-------   1 kaloyanbogdanov  staff     66 Sep 18 20:25 .zsh_history
+drwx------   5 kaloyanbogdanov  staff    160 Sep 18 20:27 .zsh_sessions
+drwx------@  3 kaloyanbogdanov  staff     96 Jan 27  2024 Applications
+drwx------+ 14 kaloyanbogdanov  staff    448 Sep 18 21:15 Desktop
+drwx------+ 20 kaloyanbogdanov  staff    640 Sep 14 20:52 Documents
+drwx------+ 25 kaloyanbogdanov  staff    800 Sep 18 19:01 Downloads
+drwx------@ 95 kaloyanbogdanov  staff   3040 Jun 12 20:18 Library
+drwx------   4 kaloyanbogdanov  staff    128 Dec 12  2023 Movies
+drwx------+  4 kaloyanbogdanov  staff    128 Jan 27  2024 Music
+drwxr-xr-x   3 kaloyanbogdanov  staff     96 Jun  7 00:18 New Folder With Items
+drwx------+  5 kaloyanbogdanov  staff    160 Sep 13 12:44 Pictures
+drwxr-xr-x+  4 kaloyanbogdanov  staff    128 Dec 12  2023 Public
+drwxr-xr-x@  3 kaloyanbogdanov  staff     96 Jan  7  2024 PycharmProjects
+-rw-------@  1 kaloyanbogdanov  staff    484 Sep 18 21:01 gitlabkey
+-rw-r--r--@  1 kaloyanbogdanov  staff    127 Sep 18 21:01 gitlabkey.pub
+kaloyanbogdanov@Kaloyans-MacBook-Air ~ % rm -rf
+kaloyanbogdanov@Kaloyans-MacBook-Air ~ % rm -f gitlabkey
+kaloyanbogdanov@Kaloyans-MacBook-Air ~ % rm -f gitlabkey.pub 
+kaloyanbogdanov@Kaloyans-MacBook-Air ~ % cd 
+kaloyanbogdanov@Kaloyans-MacBook-Air ~ % ssh-keygen -t ed25519 -C "kaloyan@gmail.com"  
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/kaloyanbogdanov/.ssh/id_ed25519): 
+Created directory '/Users/kaloyanbogdanov/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/kaloyanbogdanov/.ssh/id_ed25519
+Your public key has been saved in /Users/kaloyanbogdanov/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:hQHnGsP/3I3SadTregFGwFpigrYwLl0E7B1ViryP8Pg kaloyan@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+| ..o.ooo+...     |
+|  +.=o.+ooo .    |
+| + *oo=oo+..     |
+|. + o. =..  o.   |
+| .. . . S  ....  |
+|   + o   o + +.. |
+|  . o .   + * o. |
+|   .       o ..  |
+|    E       .o.  |
++----[SHA256]-----+
+kaloyanbogdanov@Kaloyans-MacBook-Air ~ % cd .ssh
+kaloyanbogdanov@Kaloyans-MacBook-Air .ssh % ls -la
+total 16
+drwx------   4 kaloyanbogdanov  staff  128 Sep 18 21:25 .
+drwxr-x---+ 23 kaloyanbogdanov  staff  736 Sep 18 21:25 ..
+-rw-------   1 kaloyanbogdanov  staff  411 Sep 18 21:25 id_ed25519
+-rw-r--r--   1 kaloyanbogdanov  staff   99 Sep 18 21:25 id_ed25519.pub
+kaloyanbogdanov@Kaloyans-MacBook-Air .ssh % cat id_ed25519.pub 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICYQgKyVZUS7ECEwQELGGO14TqZdWJYmEYXvkshHdTQ4 kaloyan@gmail.com
+kaloyanbogdanov@Kaloyans-MacBook-Air .ssh % git
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+kaloyanbogdanov@Kaloyans-MacBook-Air .ssh % git

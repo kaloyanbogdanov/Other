@@ -1,0 +1,88 @@
+1. Copy repository locally
+2. Make the code change
+3. Save - Ctrl + s
+
+(4. Git checkout - switch between branches
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> git checkout -b dev_kb_maaco_fleet_email_removal
+Switched to a new branch 'dev_kb_maaco_fleet_email_removal'
+)
+
+
+4. Staging - 'git add .'
+
+5. Check status
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> git status
+On branch dev_kb_maaco_fleet_email_removal
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   airflow/dags/maaco_fleet_master_build.py
+
+
+6. Commit + add message
+
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> git commit -m "remove the send email part of the dag"
+[dev_kb_maaco_fleet_email_removal 4c8a8ea98] remove the send email part of the dag
+ Committer: Kaloyan Bogdanov <Kaloyan_Bogdanov@b-eye.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+
+7. PUSH
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> git push -u origin dev_kb_maaco_fleet_email_removal
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 563 bytes | 281.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/DrivenBrands/Driven-Insights.git
+   4c8a8ea98..e3afa5ec6  dev_kb_maaco_fleet_email_removal -> dev_kb_maaco_fleet_email_removal
+branch 'dev_kb_maaco_fleet_email_removal' set up to track 'origin/dev_kb_maaco_fleet_email_removal'.
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> 
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+EXAMPLE:
+
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> git add .
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> git commit -m "remove send mail part"
+[dev_kb_maaco_fleet_email_removal e3afa5ec6] remove send mail part
+ Committer: Kaloyan Bogdanov <Kaloyan_Bogdanov@b-eye.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> git push -u origin dev_kb_maaco_fleet_email_removal
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 563 bytes | 281.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/DrivenBrands/Driven-Insights.git
+   4c8a8ea98..e3afa5ec6  dev_kb_maaco_fleet_email_removal -> dev_kb_maaco_fleet_email_removal
+branch 'dev_kb_maaco_fleet_email_removal' set up to track 'origin/dev_kb_maaco_fleet_email_removal'.
+PS C:\Users\kaloyan_bogdanov\Desktop\A8\GIT\Driven-Insights\Driven-Insights> 
